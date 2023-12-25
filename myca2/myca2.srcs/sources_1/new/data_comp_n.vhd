@@ -51,9 +51,9 @@ signal carry_2 : std_logic_vector(WIDTH downto 0);
 signal carry_3 : std_logic_vector(WIDTH downto 0);
 
 begin
-carry_1(0) <= altbin;
-carry_2(0) <= aeqbin;
-carry_3(0) <= agtbin;
+carry_1(0) <= ALTBIN;
+carry_2(0) <= AEQBIN;
+carry_3(0) <= AGTBIN;
 
 reg: for i in 0 to WIDTH-1 generate
     DC : data_comp_1
