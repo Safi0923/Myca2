@@ -37,10 +37,10 @@ entity logical_shift_n is
     port (A: in std_logic_vector(WIDTH-1 downto 0);
           S: in std_logic_vector(log2(WIDTH)-1 downto 0);
           D: out std_logic_vector(WIDTH-1 downto 0));
-          type two_dim is array (0 to log2(WIDTH)-1) of std_logic_vector(WIDTH-1 downto 0);
 end logical_shift_n;
 
 architecture behavioral of logical_shift_n is
+type two_dim is array (0 to log2(WIDTH)-1) of std_logic_vector(WIDTH-1 downto 0);
 
 component mux is
   port(A,B : in std_logic_vector(WIDTH-1 downto 0);
@@ -48,23 +48,29 @@ component mux is
          O   : out std_logic_vector(WIDTH-1 downto 0));
 end component;
 
+signal D0 : std_logic_vector((8*WIDTH)-1 downto 0);
 signal D1 : two_dim :=(others=>(others=>'0'));
-signal D0 : two_dim :=(others=>(others=>'0'));
-signal Y : two_dim :=(others=>(others=>'0'));
-begin
-D0 <= A;
-D1 <= A & '0';
 
-reg: for i in 0 to log2(WIDTH) generate
+
+begin
+
+D0(WIDTH-1 downto 0) <= A;
+D1(0) <= D0(WIDTH-2 downto 0) & '0';
+
+reg: for i in 1 to log2(WIDTH) generate
     DC : mux
     port map(
-        A => D0,
-        B => D1,
-        S => S(i),
-        O  => Y
+        A => D0((i*WIDTH)-1 downto (i-1)*WIDTH),
+        B => D1(i-1),
+        S => S(i-1),
+        O => D0((i+1)*WIDTH-1 downto (i)*WIDTH)
         );
 end generate;
 
-D <= Y; 
+
+D1(1) <= D0((1+1)*WIDTH-3 downto (1)*WIDTH) & "00";
+D1(2) <= D0((2+1)*WIDTH-5 downto (2)*WIDTH) & "0000";
+
+D <= D0((log2(WIDTH)+1)*WIDTH-1 downto log2(WIDTH)*WIDTH); 
 
 end behavioral;

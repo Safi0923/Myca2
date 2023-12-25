@@ -41,7 +41,7 @@ end;
 package body log_function is
   function log2(x : integer) return integer is
     variable temp : integer :=x;
-    variable n : integer := 1;
+    variable n : integer := 0;
     begin
         while temp > 1 loop
             temp := temp/2;

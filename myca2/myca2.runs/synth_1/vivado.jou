@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Dec 25 16:48:36 2023
+# Process ID: 2341590
+# Current directory: /home/ahsa018f/myca2/myca2.runs/synth_1
+# Command line: vivado -log logical_shift_n.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source logical_shift_n.tcl
+# Log file: /home/ahsa018f/myca2/myca2.runs/synth_1/logical_shift_n.vds
+# Journal file: /home/ahsa018f/myca2/myca2.runs/synth_1/vivado.jou
+# Running On: adsvmemca, OS: Linux, CPU Frequency: 2999.999 MHz, CPU Physical cores: 8, Host memory: 67388 MB
+#-----------------------------------------------------------
+source logical_shift_n.tcl -notrace
