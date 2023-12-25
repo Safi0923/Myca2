@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 12/25/2023 10:39:46 AM
+-- Create Date: 12/25/2023 08:40:39 PM
 -- Design Name: 
--- Module Name: logical_shift_n - Behavioral
+-- Module Name: logical_shift_n_right - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -33,14 +33,14 @@ use work.log_function.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity logical_shift_n is
-    generic(WIDTH : positive :=8);
+entity logical_shift_n_right is
+generic(WIDTH : positive :=8);
     port (A: in std_logic_vector(WIDTH-1 downto 0);
           S: in std_logic_vector(log2(WIDTH)-1 downto 0);
           D: out std_logic_vector(WIDTH-1 downto 0));
-end logical_shift_n;
+end logical_shift_n_right;
 
-architecture behavioral of logical_shift_n is
+architecture behavioral of logical_shift_n_right is
 type two_dim is array (0 to log2(WIDTH)-1) of std_logic_vector(WIDTH-1 downto 0);
 
 component mux is
@@ -57,7 +57,7 @@ signal D1 : two_dim :=(others=>(others=>'0'));
 begin
 
 D0(WIDTH-1 downto 0) <= A;
-D1(0) <= D0(WIDTH-2 downto 0) & '0';
+D1(0) <= '0' & D0(WIDTH-2 downto 0);
 
 reg: for i in 1 to log2(WIDTH) generate
     DC : mux
@@ -70,7 +70,7 @@ reg: for i in 1 to log2(WIDTH) generate
 end generate;
 
 generate_D1: for i in 1 to log2(WIDTH)-1 generate
-    D1(i) <= D0(((i+1)*WIDTH) -(2**i)-1 downto (i)*WIDTH) & std_logic_vector(to_unsigned(0,2**i));
+    D1(i) <= std_logic_vector(to_unsigned(0,2**i)) & D0(((i+1)*WIDTH) -(2**i)-1 downto (i)*WIDTH);
 end generate;
 
 --D1(1) <= D0((1+1)*WIDTH-3 downto (1)*WIDTH) & "00";
