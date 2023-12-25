@@ -34,7 +34,7 @@ use work.log_function.all;
 --use UNISIM.VComponents.all;
 
 entity logical_shift_n is
-    generic(WIDTH : positive :=16);
+    generic(WIDTH : positive :=256);
     port (A: in std_logic_vector(WIDTH-1 downto 0);
           S: in std_logic_vector(log2(WIDTH)-1 downto 0);
           D: out std_logic_vector(WIDTH-1 downto 0));
@@ -44,13 +44,13 @@ architecture behavioral of logical_shift_n is
 type two_dim is array (0 to log2(WIDTH)-1) of std_logic_vector(WIDTH-1 downto 0);
 
 component mux is
-generic(WIDTH : positive :=16);
+generic(WIDTH : positive :=256);
   port(A,B : in std_logic_vector(WIDTH-1 downto 0);
          S   : in std_logic;
          O   : out std_logic_vector(WIDTH-1 downto 0));
 end component;
 
-signal D0 : std_logic_vector((8*WIDTH)-1 downto 0);
+signal D0 : std_logic_vector(((log2(WIDTH)+1)*WIDTH)-1 downto 0);
 signal D1 : two_dim :=(others=>(others=>'0'));
 
 
