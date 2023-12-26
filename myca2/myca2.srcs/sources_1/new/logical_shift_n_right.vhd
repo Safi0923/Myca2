@@ -57,7 +57,7 @@ signal D1 : two_dim :=(others=>(others=>'0'));
 begin
 
 D0(WIDTH-1 downto 0) <= A;
-D1(0) <= '0' & D0(WIDTH-2 downto 0);
+D1(0) <= '0' & D0(WIDTH-1 downto 1);
 
 reg: for i in 1 to log2(WIDTH) generate
     DC : mux
@@ -70,12 +70,12 @@ reg: for i in 1 to log2(WIDTH) generate
 end generate;
 
 generate_D1: for i in 1 to log2(WIDTH)-1 generate
-    D1(i) <= std_logic_vector(to_unsigned(0,2**i)) & D0(((i+1)*WIDTH) -(2**i)-1 downto (i)*WIDTH);
+    D1(i) <= std_logic_vector(to_unsigned(0,2**i)) & D0(((i+1)*WIDTH)-1 downto (i)*WIDTH+(2**i));
 end generate;
 
---D1(1) <= D0((1+1)*WIDTH-3 downto (1)*WIDTH) & "00";
---D1(2) <= D0((2+1)*WIDTH-5 downto (2)*WIDTH) & "0000";
---D1(3) <= D0((3+1)*WIDTH-9 downto (3)*WIDTH) & "00000000";
+--D1(1) <=  "00" & D0((1+1)*WIDTH-1 downto (1)*WIDTH+2);
+--D1(2) <= "0000" & D0((2+1)*WIDTH-1 downto (2)*WIDTH+4);
+--D1(3) <= "00000000" & D0((3+1)*WIDTH-1 downto (3)*WIDTH+8);
 
 D <= D0((log2(WIDTH)+1)*WIDTH-1 downto log2(WIDTH)*WIDTH); 
 
