@@ -33,7 +33,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity data_comp_n is
     generic(WIDTH : positive :=4);
-    port (ALTBIN,AEQBIN,AGTBIN: in std_logic:='1';
+    port (AEQBIN: in std_logic:='1';
+          ALTBIN,AGTBIN: in std_logic:='0';
           A,B: in std_logic_vector(WIDTH-1 downto 0);
           ALTBOUT,AEQBOUT,AGTBOUT: out std_logic);
 end data_comp_n;
