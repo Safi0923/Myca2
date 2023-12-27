@@ -35,39 +35,67 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity bidirectional_shift_register is
     port (clk,clr,l,r: in std_logic;
-          D: in std_logic_vector(3 downto 0);
+          D0,D1,D2,D3: in std_logic;
           S: in std_logic_vector(1 downto 0);
-          Q: out std_logic_vector(3 downto 0));
+          Q0,Q1,Q2,Q3: out std_logic);
 end bidirectional_shift_register;
 
 architecture behavioral of bidirectional_shift_register is
-  signal zero : unsigned(3 downto 0) := (others=>'0');
+  signal zero : std_logic := '0';
+  signal one : std_logic := '1';
   begin
     process (CLK)
-      variable temp : unsigned(3 downto 0) := (others=>'0');
+      variable temp0 : std_logic := '0';
+      variable temp1 : std_logic := '0';
+      variable temp2 : std_logic := '0';
+      variable temp3 : std_logic := '0';
       begin
         if rising_edge(CLK) then
             if (clr = '1') then
-                temp := zero;
+                temp0 := zero;
+                temp1 := zero;
+                temp2 := zero;
+                temp3 := zero;
             elsif (S = "00") then
-                temp := temp;
+                temp0 := temp0;
+                temp1 := temp1;
+                temp2 := temp2;
+                temp3 := temp3;
             elsif (S = "01") then
                 if (r = '0') then
-                    temp := '0' & temp(2 downto 0);
+                    temp3 := zero;
+                    temp2 := temp2;
+                    temp1 := temp1;
+                    temp0 := temp0;
                 else
-                    temp := '1' & temp(2 downto 0);
+                    temp3 := one;
+                    temp2 := temp2;
+                    temp1 := temp1;
+                    temp0 := temp0;
                 end if;
             elsif (S="10") then
                 if (l = '0') then
-                    temp := temp(3 downto 1) & '0';
+                    temp3 := temp3;
+                    temp2 := temp2;
+                    temp1 := temp1;
+                    temp0 := zero;
                 else
-                    temp := temp(3 downto 1) & '1';
+                    temp3 := temp3;
+                    temp2 := temp2;
+                    temp1 := temp1;
+                    temp0 := one;
                 end if;
             else
-                temp:=unsigned(D);
+                temp3 := D3;
+                temp2 := D2;
+                temp1 := D1;
+                temp0 := D0;
             end if;
-        end if;    
-      Q <= std_logic_vector(temp);
+        end if;
+      Q0 <= temp0;
+      Q1 <= temp1;
+      Q2 <= temp2;    
+      Q3 <= temp3;
     end process;
         
 end behavioral;

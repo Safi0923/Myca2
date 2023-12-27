@@ -4,81 +4,41 @@
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="logical_shift_n_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS" Name="logical_shift_n_routed.rqs"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BG-DRC" Name="logical_shift_n.drc"/>
-  <File Type="BG-BGN" Name="logical_shift_n.bgn"/>
-  <File Type="BITSTR-SYSDEF" Name="logical_shift_n.sysdef"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="logical_shift_n.ltx"/>
   <File Type="RBD_FILE" Name="logical_shift_n.rbd"/>
   <File Type="NPI_FILE" Name="logical_shift_n.npi"/>
   <File Type="RNPI_FILE" Name="logical_shift_n.rnpi"/>
   <File Type="CFI_FILE" Name="logical_shift_n.cfi"/>
   <File Type="RCFI_FILE" Name="logical_shift_n.rcfi"/>
-  <File Type="RDI-RDI" Name="logical_shift_n.vdi"/>
-  <File Type="PDI-FILE" Name="logical_shift_n.pdi"/>
-  <File Type="BITSTR-MMI" Name="logical_shift_n.mmi"/>
-  <File Type="BITSTR-BMM" Name="logical_shift_n_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="logical_shift_n.nky"/>
-  <File Type="BITSTR-RBT" Name="logical_shift_n.rbt"/>
-  <File Type="BITSTR-MSK" Name="logical_shift_n.msk"/>
-  <File Type="BG-BIN" Name="logical_shift_n.bin"/>
-  <File Type="BG-BIT" Name="logical_shift_n.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="logical_shift_n_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="logical_shift_n_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="logical_shift_n_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="logical_shift_n_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="logical_shift_n_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="logical_shift_n_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="logical_shift_n_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="logical_shift_n_postroute_physopt.dcp"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="logical_shift_n_bus_skew_routed.rpx"/>
-  <File Type="PA-TCL" Name="logical_shift_n.tcl"/>
-  <File Type="INIT-TIMING" Name="logical_shift_n_timing_summary_init.rpt"/>
-  <File Type="OPT-DCP" Name="logical_shift_n_opt.dcp"/>
-  <File Type="OPT-DRC" Name="logical_shift_n_drc_opted.rpt"/>
-  <File Type="PLACE-TIMING" Name="logical_shift_n_timing_summary_placed.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="logical_shift_n_methodology_drc_opted.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="logical_shift_n_utilization_placed.pb"/>
-  <File Type="OPT-HWDEF" Name="logical_shift_n.hwdef"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="logical_shift_n_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="REPORTS-TCL" Name="logical_shift_n_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="logical_shift_n_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="logical_shift_n_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="logical_shift_n_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="logical_shift_n_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="logical_shift_n_placed.dcp"/>
-  <File Type="PLACE-IO" Name="logical_shift_n_io_placed.rpt"/>
-  <File Type="PHYSOPT-TIMING" Name="logical_shift_n_timing_summary_physopted.rpt"/>
-  <File Type="PLACE-CLK" Name="logical_shift_n_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="logical_shift_n_utilization_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="logical_shift_n_control_sets_placed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="logical_shift_n_methodology_drc_routed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="logical_shift_n_incremental_reuse_placed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="logical_shift_n_methodology_drc_routed.pb"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="logical_shift_n_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="logical_shift_n_drc_routed.rpx"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="logical_shift_n_postplace_pwropt.dcp"/>
   <File Type="PHYSOPT-DCP" Name="logical_shift_n_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="logical_shift_n_drc_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="logical_shift_n_routed_error.dcp"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="logical_shift_n.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="logical_shift_n.sysdef"/>
+  <File Type="BITSTR-MMI" Name="logical_shift_n.mmi"/>
+  <File Type="BITSTR-BMM" Name="logical_shift_n_bd.bmm"/>
+  <File Type="BG-BGN" Name="logical_shift_n.bgn"/>
+  <File Type="OPT-DCP" Name="logical_shift_n_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="logical_shift_n.hwdef"/>
+  <File Type="BG-BIT" Name="logical_shift_n.bit"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="PA-TCL" Name="logical_shift_n.tcl"/>
+  <File Type="REPORTS-TCL" Name="logical_shift_n_reports.tcl"/>
+  <File Type="BG-DRC" Name="logical_shift_n.drc"/>
+  <File Type="PDI-FILE" Name="logical_shift_n.pdi"/>
+  <File Type="RDI-RDI" Name="logical_shift_n.vdi"/>
+  <File Type="BG-BIN" Name="logical_shift_n.bin"/>
+  <File Type="PLACE-DCP" Name="logical_shift_n_placed.dcp"/>
+  <File Type="BITSTR-MSK" Name="logical_shift_n.msk"/>
+  <File Type="PWROPT-DCP" Name="logical_shift_n_pwropt.dcp"/>
+  <File Type="BITSTR-RBT" Name="logical_shift_n.rbt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="logical_shift_n_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-NKY" Name="logical_shift_n.nky"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="logical_shift_n_incremental_reuse_pre_placed.rpt"/>
   <File Type="ROUTE-DCP" Name="logical_shift_n_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="logical_shift_n_routed_error.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="logical_shift_n_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="logical_shift_n_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="logical_shift_n_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="logical_shift_n_drc_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="logical_shift_n_power_routed.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="logical_shift_n_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="logical_shift_n_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="logical_shift_n_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="logical_shift_n_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="logical_shift_n_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="logical_shift_n_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="logical_shift_n_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="logical_shift_n_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="logical_shift_n_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="logical_shift_n_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="logical_shift_n_bus_skew_routed.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/log_function.vhd">
@@ -162,5 +122,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>
