@@ -43,9 +43,9 @@ architecture behavioral of opcode_decoder is
 signal p : std_logic_vector(3 downto 0);
 signal q : std_logic_vector(6 downto 0);
 begin
-p <= deco_in_opcode & deco_in_flag;
 process(deco_in_flag,deco_in_opcode)
 begin
+p <= deco_in_opcode & deco_in_flag;
 case p is
     when "0000" => q <= "0000000";
     when "0001" => q <= "1000000";
