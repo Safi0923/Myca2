@@ -34,8 +34,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity stack is
     port (clk,clr: in std_logic;
           S: in std_logic_vector(1 downto 0);
-          A: in std_logic_vector(3 downto 0);
-          Q: out std_logic_vector(3 downto 0));
+          A: in std_logic_vector(7 downto 0);
+          Q: out std_logic_vector(7 downto 0));
 end stack;
 
 architecture behavioral of stack is
@@ -47,10 +47,10 @@ architecture behavioral of stack is
               Q0,Q1,Q2,Q3: out std_logic);
     end component;
 
-    signal p1,q1,s1 : std_logic_vector(3 downto 0);
+    signal p1,q1,s1 : std_logic_vector(7 downto 0);
 
 begin
-reg: for i in 0 to 3 generate
+reg: for i in 0 to 7 generate
     DC : bidirectional_shift_register
     port map(
         clk => clk,
