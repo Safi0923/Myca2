@@ -34,7 +34,7 @@ use IEEE.numeric_std.ALL;
 --use UNISIM.VComponents.all;
 
 entity synchronous_counter is
-    Generic(WIDTH : positive := 4);
+    Generic(WIDTH : positive := 8);
     Port (clk : in  STD_LOGIC;
            updwn, clr, ld, en : in STD_LOGIC;
            D : in STD_LOGIC_VECTOR(WIDTH-1 downto 0);
