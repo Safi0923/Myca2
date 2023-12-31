@@ -114,7 +114,7 @@ architecture structural of myca2_pop is
                 COUT: out std_logic);
         end component;
     
-        component or2 is
+        component or_2 is
             port (in1,in2: in  std_logic; 
                   or_out:  out std_logic);
         end component;
@@ -191,8 +191,8 @@ architecture structural of myca2_pop is
             SS1 => d ,
             SS2 => price ,
             SS3 => j ,
-            SS4 => (others => 'Z') ,
-            SS5 => (others => 'Z') ,
+            SS4 => "0000" ,
+            SS5 => "0000" ,
             Sel => segments_sel ,
             SSO => segments 
             );
@@ -215,17 +215,17 @@ architecture structural of myca2_pop is
         o2 => return_nickel , 
         o4=> b ,
         o5 => f,
-        Q =>
-        );
+        Q(3 downto 0) => j,
+        Q(7 downto 4) => "0000");
         
-        d7 : or2
+        d7 : or_2
         port map(
         in1=> n ,
         in2 => clr,  
         or_out => e
         );
         
-         d8 : or2
+         d8 : or_2
         port map(
         in1=> o ,
         in2 => clr,  
