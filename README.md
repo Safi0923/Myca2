@@ -5,6 +5,7 @@ In this project, the following three designs were implemented:-
 1. Pop machine controller using Moore State Machine (FSM)
 2. Pop machine controller using Myca-II
 3. Parking lot controller using Myca-II
+4. 4-bit ALU
 
 The first two designs were tested on PYNQ-Z1 board with the LEDs showing the relevant input/output details regarding the pop machine. 
 
