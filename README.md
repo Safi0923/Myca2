@@ -1,5 +1,12 @@
 The Myca-II programmable controller is a device that can be programmed to implement a specific state diagram using assembly language.
-In this project, a Myca-II programmable controller is designed using VHDL so that it can be programmed to implement a pop machine compute system or a parking lot control system.
+
+In this project, the following three designs were implemented:-
+
+1. Pop machine controller using Moore State Machine (FSM)
+2. Pop machine controller using Myca-II
+3. Parking lot controller using Myca-II
+
+The first two designs were tested on PYNQ-Z1 board with the LEDs showing the relevant input/output details regarding the pop machine. 
 
 Notes:- 
 
