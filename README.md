@@ -1,6 +1,6 @@
 The Myca-II programmable controller is a device that can be programmed to implement a specific state diagram using assembly language.
 
-In this project, the following three designs were implemented:-
+In this project, the following were designed:-
 
 1. Pop machine controller using Moore State Machine (FSM)
 2. Pop machine controller using Myca-II
