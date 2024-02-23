@@ -45,7 +45,8 @@ constant ignore: std_logic_vector(7 downto 0):="--------";
 begin
 process(A)
 begin
-case A is
+case A is 
+        --State        Opcode  varmux  baddr    XX|XX|DA|RN|CA|DP|LD|SU
     when x"00" => D <= "000" & "000" & ignore & "00000001"; 
     when x"01" => D <= "000" & "001" & ignore & "00000010"; 
     when x"02" => D <= "100" & "111" & x"00" & "00000000";
