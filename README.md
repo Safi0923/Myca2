@@ -7,7 +7,7 @@ In this project, the following were designed:-
 3. Parking lot controller using Myca-II
 4. 4-bit ALU
 
-The first two designs were tested on PYNQ-Z1 board with the LEDs showing the relevant input/output details regarding the pop machine. 
+The first two designs were tested on PYNQ-Z1 board with the LEDs showing the relevant outputs for the pop machine. 
 
 Notes:- 
 
